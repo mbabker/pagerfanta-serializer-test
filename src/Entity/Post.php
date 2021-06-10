@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation as Serializer;
 
 #[ORM\Entity]
 #[ORM\Table]
@@ -13,15 +14,18 @@ class Post
     #[ORM\Column(nullable: false)]
     #[ORM\Id]
     #[ORM\GeneratedValue]
+    #[Serializer\Groups(['list_posts'])]
     public ?int $id = null;
 
     #[ORM\Column]
+    #[Serializer\Groups(['list_posts'])]
     public string $title;
 
     /**
      * @var Collection<Comment>
      */
     #[ORM\OneToMany(mappedBy: 'post', targetEntity: Comment::class, cascade: ['persist'], fetch: 'EXTRA_LAZY')]
+    #[Serializer\Groups(['list_posts'])]
     private Collection $comments;
 
     protected function __construct()

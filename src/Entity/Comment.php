@@ -2,9 +2,8 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation as Serializer;
 
 #[ORM\Entity]
 #[ORM\Table]
@@ -13,9 +12,11 @@ class Comment
     #[ORM\Column(nullable: false)]
     #[ORM\Id]
     #[ORM\GeneratedValue]
+    #[Serializer\Groups(['list_posts'])]
     public ?int $id = null;
 
     #[ORM\Column]
+    #[Serializer\Groups(['list_posts'])]
     public string $message;
 
     #[ORM\ManyToOne(inversedBy: 'comments')]

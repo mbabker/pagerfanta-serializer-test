@@ -15,9 +15,8 @@ final class ApiPostsController extends AbstractController
     public function index(PostRepository $postRepository): Response
     {
         return $this->json(
-            new Pagerfanta(
-                new QueryAdapter($postRepository->createPostListQueryBuilder())
-            )
+            data: new Pagerfanta(new QueryAdapter($postRepository->createPostListQueryBuilder())),
+            context: ['groups' => 'list_posts'],
         );
     }
 }
