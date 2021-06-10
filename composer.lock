@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec57109cf47c8e8d9f5f0c00e97dad3f",
+    "content-hash": "4a4baf9a6e3a74c054dec2d72afc181e",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BabDev/PagerfantaBundle.git",
-                "reference": "9e050b86871b5b3aacc23425280f77e19e990eb0"
+                "reference": "50e59967912aace10b623d1162368c11176b0eed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BabDev/PagerfantaBundle/zipball/9e050b86871b5b3aacc23425280f77e19e990eb0",
-                "reference": "9e050b86871b5b3aacc23425280f77e19e990eb0",
+                "url": "https://api.github.com/repos/BabDev/PagerfantaBundle/zipball/50e59967912aace10b623d1162368c11176b0eed",
+                "reference": "50e59967912aace10b623d1162368c11176b0eed",
                 "shasum": ""
             },
             "require": {
@@ -79,7 +79,7 @@
             ],
             "support": {
                 "issues": "https://github.com/BabDev/PagerfantaBundle/issues",
-                "source": "https://github.com/BabDev/PagerfantaBundle/tree/v3.2.0"
+                "source": "https://github.com/BabDev/PagerfantaBundle/tree/v3.2.1"
             },
             "funding": [
                 {
@@ -87,7 +87,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-11T23:46:40+00:00"
+            "time": "2021-06-09T23:45:00+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
